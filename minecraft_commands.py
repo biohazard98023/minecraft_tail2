@@ -1,11 +1,12 @@
 # Minecraft_tail2 commands
 import os
 
-class Commander (object):
+class Commander (object, custom_commands):
 
     def __init__(self):
         self.invoke_front = "screen -p 0 -S minecraft -X eval 'stuff \""
         self.invoke_back = "\"\\015'"
+        custom_commands = self.custom_commands
         self.command_list = {
             "home" : self.home_f,
             "tkipz" : self.tstaci_f,
