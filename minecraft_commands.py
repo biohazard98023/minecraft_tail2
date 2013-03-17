@@ -6,7 +6,7 @@ class Commander (object):
     def __init__(self, custom_commands):
         self.invoke_front = "screen -p 0 -S minecraft -X eval 'stuff \""
         self.invoke_back = "\"\\015'"
-        custom_commands = self.custom_commands
+        self.custom_commands = custom_commands
         self.command_list = {
             "home" : self.home_f,
             "tkipz" : self.tstaci_f,
