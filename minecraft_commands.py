@@ -1,7 +1,7 @@
 # Minecraft_tail2 commands
 import os
 
-class Commander (object, custom_commands):
+class Commander (object):
 
     def __init__(self, custom_commands):
         self.invoke_front = "screen -p 0 -S minecraft -X eval 'stuff \""
