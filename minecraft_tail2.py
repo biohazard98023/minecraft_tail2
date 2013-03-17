@@ -9,8 +9,6 @@ log_file = "server.log"
 ops_file = "ops.txt"
 temp_file = "/home/minecraft/scripts/temp_file.txt"
 
-# reads temp file with commands
-minecraft_tempfile.read_file(temp_file)
 # Make commands object
 commands = minecraft_commands.Commander(minecraft_tempfile.read_file(temp_file))
 # Set up tail
