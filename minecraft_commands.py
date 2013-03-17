@@ -104,7 +104,14 @@ class Commander (object):
         os.system(cmd)
         
     def t_f(self, ops_user, command):
-        pass
+        for i in self.custom_commands:
+            if i.split(" ")[0] == ops_user and i.split(" ")[1] == command[4]:
+                cmd = self.invoke_front + "tp %s %s %s %s" % (ops_user, i.split(" ")[2], i.split(" ")[3], i.split(" ")[4]) + self.invoke_back
+                os.system(cmd)
+            else:
+                print "not a match: "
+                print "tp %s %s %s %s" % (ops_user, i.split(" ")[2], i.split(" ")[3], i.split(" ")[4])
+                print i
             
     def set_t_f(self, ops_user, command):
         pass
