@@ -105,11 +105,7 @@ class Commander (object):
         
     def t_f(self, ops_user, command):
         for i in self.custom_commands:
-            print "ops_user", ops_user
-            print "i.split(" ")[0]: ", i.split(" ")[0]
-            print "command[4]: ", command[4]
-            print "i.split(" ")[1]: ", i.split(" ")[1]
-            if i.split(" ")[0] == ops_user and i.split(" ")[1] == command[4]:
+            if i.split(" ")[0] == ops_user and i.split(" ")[1] == command[5]:
                 cmd = self.invoke_front + "tp %s %s %s %s" % (ops_user, i.split(" ")[2], i.split(" ")[3], i.split(" ")[4]) + self.invoke_back
                 os.system(cmd)
             else:
